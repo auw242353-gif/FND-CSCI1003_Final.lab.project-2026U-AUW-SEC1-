@@ -1,0 +1,1272 @@
+/* ================================
+   GENERAL STYLING
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f8ff;
+  color: #172b4d;
+  min-height: 100vh;
+}
+
+
+/* ================================
+   NAVIGATION BAR
+================================ */
+
+.navbar {
+  width: 100%;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1769aa;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #172b4d;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1769aa;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+  min-height: 520px;
+  padding: 70px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: linear-gradient(
+    135deg,
+    #eaf4ff,
+    #ffffff
+  );
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.welcome {
+  color: #1b75bb;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  color: #12345b;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #5b6b7f;
+  margin-bottom: 30px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #1769aa;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #0f4f83;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(23, 105, 170, 0.3);
+}
+
+.secondary-btn {
+  background: white;
+  color: #1769aa;
+  border: 2px solid #1769aa;
+}
+
+.secondary-btn:hover {
+  background: #1769aa;
+  color: white;
+  transform: translateY(-3px);
+}
+
+
+/* ================================
+   MONEY ILLUSTRATION
+================================ */
+
+.hero-image {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.money-card {
+  width: 230px;
+  height: 230px;
+  border-radius: 35px;
+  background: linear-gradient(
+    135deg,
+    #1769aa,
+    #4aa3df
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  box-shadow: 0 20px 45px rgba(23, 105, 170, 0.3);
+  transform: rotate(-5deg);
+}
+
+.coin {
+  position: absolute;
+  font-size: 40px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.coin-one {
+  top: 20px;
+  right: 30px;
+}
+
+.coin-two {
+  bottom: 35px;
+  left: 20px;
+  animation-delay: 0.8s;
+}
+
+.coin-three {
+  top: 120px;
+  right: -10px;
+  animation-delay: 1.5s;
+}
+
+
+/* ================================
+   FLOATING ANIMATION
+================================ */
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.features {
+  padding: 70px 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  background: white;
+}
+
+.feature-card {
+  padding: 35px 25px;
+  text-align: center;
+  background: #f8fbff;
+  border-radius: 18px;
+  border: 1px solid #e1ecf7;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+  color: #12345b;
+}
+
+.feature-card p {
+  color: #68788a;
+  line-height: 1.6;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #12345b;
+  color: white;
+  font-size: 14px;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    width: 280px;
+    height: 280px;
+  }
+
+}
+/* ================================
+   HOME PAGE
+================================ */
+
+.home-hero {
+  min-height: 390px;
+  padding: 60px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: linear-gradient(135deg, #eaf4ff, #ffffff);
+}
+
+.home-text {
+  max-width: 650px;
+}
+
+.home-text h1 {
+  font-size: 42px;
+  color: #12345b;
+  margin-bottom: 18px;
+}
+
+.home-text > p:not(.welcome) {
+  color: #66778a;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.home-image {
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-money-icon {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1769aa, #53b4e8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
+  box-shadow: 0 20px 45px rgba(23, 105, 170, 0.25);
+}
+
+
+/* ================================
+   SUMMARY CARDS
+================================ */
+
+.summary {
+  padding: 45px 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  background: white;
+}
+
+.summary-card {
+  padding: 28px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #e3edf7;
+  transition: 0.3s;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.income-card {
+  background: #effcf5;
+}
+
+.expense-card {
+  background: #fff3f3;
+}
+
+.balance-card {
+  background: #eef7ff;
+}
+
+.summary-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  background: white;
+}
+
+.summary-card p {
+  color: #6b7b8c;
+  margin-bottom: 7px;
+}
+
+.summary-card h2 {
+  color: #12345b;
+  font-size: 25px;
+}
+
+
+/* ================================
+   RECENT TRANSACTIONS
+================================ */
+
+.recent-section {
+  padding: 60px 8%;
+  background: #f7faff;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.small-title {
+  color: #1769aa;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.section-heading h2 {
+  font-size: 30px;
+  color: #12345b;
+}
+
+.view-btn {
+  text-decoration: none;
+  color: #1769aa;
+  font-weight: bold;
+}
+
+.transaction-list {
+  background: white;
+  border-radius: 18px;
+  padding: 35px;
+  min-height: 220px;
+  border: 1px solid #e2ebf4;
+}
+
+.empty-message {
+  text-align: center;
+  color: #66778a;
+}
+
+.empty-message > div {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.empty-message h3 {
+  color: #12345b;
+  margin-bottom: 8px;
+}
+
+.empty-message p {
+  margin-bottom: 20px;
+}
+
+
+/* ================================
+   SAVING REMINDER
+================================ */
+
+.saving-reminder {
+  margin: 50px 8%;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #12345b, #1769aa);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.saving-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.saving-icon {
+  font-size: 50px;
+}
+
+.saving-content .small-title {
+  color: #8ed8ff;
+}
+
+.saving-content h2 {
+  margin-bottom: 8px;
+}
+
+.saving-content p {
+  color: #d9ebf8;
+  line-height: 1.5;
+}
+
+.saving-reminder .secondary-btn {
+  background: white;
+  color: #1769aa;
+  border: none;
+  white-space: nowrap;
+}
+
+
+/* ================================
+   HOME RESPONSIVE
+================================ */
+
+@media (max-width: 850px) {
+
+  .home-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .saving-reminder {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .saving-content {
+    flex-direction: column;
+  }
+
+} 
+/* ================================
+   TRANSACTIONS PAGE
+================================ */
+
+.page-header {
+  padding: 55px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #eaf4ff, #f7f3ff);
+}
+
+.page-header h1 {
+  font-size: 40px;
+  color: #12345b;
+  margin: 10px 0;
+}
+
+.page-header p:not(.welcome) {
+  color: #68788a;
+  font-size: 17px;
+}
+
+.page-illustration {
+  width: 130px;
+  height: 130px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #1769aa, #7654d6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+  box-shadow: 0 15px 35px rgba(23, 105, 170, 0.25);
+  transform: rotate(5deg);
+}
+
+
+/* ================================
+   TRANSACTION FORM SECTION
+================================ */
+
+.transaction-container {
+  padding: 60px 8%;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 35px;
+  background: #f7faff;
+}
+
+.form-card {
+  background: white;
+  padding: 35px;
+  border-radius: 22px;
+  border: 1px solid #e2ebf4;
+  box-shadow: 0 10px 30px rgba(18, 52, 91, 0.06);
+}
+
+.form-title {
+  margin-bottom: 30px;
+}
+
+.form-title h2 {
+  color: #12345b;
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.form-title p {
+  color: #7a8998;
+}
+
+
+/* ================================
+   FORM ELEMENTS
+================================ */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #263f5c;
+  margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #dce6f0;
+  border-radius: 11px;
+  outline: none;
+  font-family: inherit;
+  font-size: 15px;
+  color: #263f5c;
+  background: #fbfdff;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #1769aa;
+  box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.1);
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+
+/* ================================
+   INCOME / EXPENSE BUTTONS
+================================ */
+
+.type-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.type-btn {
+  padding: 13px;
+  border-radius: 11px;
+  border: 2px solid #e0e8f0;
+  background: white;
+  color: #526579;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.type-btn:hover {
+  border-color: #1769aa;
+}
+
+.income-type.active-type {
+  background: #eafaf1;
+  border-color: #31a866;
+  color: #21854e;
+}
+
+.expense-type.active-type {
+  background: #fff0f0;
+  border-color: #e15b5b;
+  color: #c43f3f;
+}
+
+
+/* ================================
+   AMOUNT INPUT
+================================ */
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon span {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1769aa;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.input-with-icon input {
+  padding-left: 38px;
+}
+
+
+/* ================================
+   ADD TRANSACTION BUTTON
+================================ */
+
+.add-transaction-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #1769aa, #7654d6);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-transaction-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(23, 105, 170, 0.25);
+}
+
+
+/* ================================
+   TRANSACTION INFORMATION CARD
+================================ */
+
+.transaction-image-card {
+  padding: 40px 30px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #12345b, #1769aa);
+  color: white;
+  text-align: center;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(18, 52, 91, 0.18);
+}
+
+.transaction-big-icon {
+  width: 125px;
+  height: 125px;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+  margin-bottom: 25px;
+}
+
+.transaction-image-card h2 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.transaction-image-card > p {
+  color: #dcecf9;
+  line-height: 1.7;
+  max-width: 350px;
+}
+
+
+/* ================================
+   MINI TIPS
+================================ */
+
+.mini-tips {
+  width: 100%;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.mini-tips div {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e8f4ff;
+}
+
+.mini-tips span {
+  color: #72e0a3;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+
+/* ================================
+   TRANSACTION HISTORY
+================================ */
+
+.history-section {
+  padding: 60px 8%;
+  background: white;
+}
+
+.transaction-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid #e2ebf4;
+}
+
+.transaction-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.transaction-table-wrapper th {
+  padding: 17px;
+  background: #f4f8fd;
+  color: #496077;
+  text-align: left;
+  font-size: 14px;
+}
+
+.transaction-table-wrapper td {
+  padding: 17px;
+  border-top: 1px solid #edf1f5;
+  color: #526579;
+}
+
+.transaction-table-wrapper tr:hover {
+  background: #f9fbfe;
+}
+
+.no-transactions {
+  text-align: center !important;
+  padding: 45px !important;
+  color: #8493a3 !important;
+}
+
+
+/* ================================
+   RESPONSIVE TRANSACTIONS
+================================ */
+
+@media (max-width: 900px) {
+
+  .transaction-container {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    text-align: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .page-header h1 {
+    font-size: 30px;
+  }
+
+  .form-card {
+    padding: 25px;
+  }
+
+  .transaction-container {
+    padding: 40px 5%;
+  }
+
+  .history-section {
+    padding: 40px 5%;
+  }
+
+}
+/* ================================
+   BUDGET & SAVINGS PAGE
+================================ */
+
+.budget-overview {
+  padding: 45px 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  background: white;
+}
+
+.budget-card {
+  padding: 27px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #f8fbff;
+  border: 1px solid #e1ebf5;
+  transition: 0.3s;
+}
+
+.budget-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.budget-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background: #eaf4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.budget-card p {
+  color: #6d7d8d;
+  margin-bottom: 7px;
+}
+
+.budget-card h2 {
+  color: #12345b;
+}
+
+
+/* ================================
+   BUDGET CONTENT
+================================ */
+
+.budget-content {
+  padding: 60px 8%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 30px;
+  background: #f7faff;
+}
+
+.budget-form-card,
+.progress-card {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid #e2ebf4;
+  box-shadow: 0 8px 25px rgba(18, 52, 91, 0.05);
+}
+
+.budget-form-card h2,
+.progress-card h2 {
+  color: #12345b;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  color: #788898;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.budget-form-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 9px;
+  color: #314861;
+}
+
+.budget-input {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.budget-input span {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1769aa;
+  font-weight: bold;
+}
+
+.budget-input input {
+  width: 100%;
+  padding: 14px 15px 14px 38px;
+  border: 1px solid #dce6f0;
+  border-radius: 11px;
+  outline: none;
+  font-size: 15px;
+}
+
+.budget-input input:focus {
+  border-color: #1769aa;
+  box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.1);
+}
+
+
+/* ================================
+   PROGRESS
+================================ */
+
+.progress-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-heading > span {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1769aa;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 18px;
+  background: #e9eff5;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 35px 0 15px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #1769aa, #7654d6);
+  transition: width 0.5s ease;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  color: #718293;
+  font-size: 14px;
+}
+
+
+/* ================================
+   SAVINGS SECTION
+================================ */
+
+.savings-section {
+  padding: 60px 8%;
+  background: white;
+}
+
+.savings-card {
+  padding: 38px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #12345b, #1769aa);
+  color: white;
+  box-shadow: 0 15px 35px rgba(18, 52, 91, 0.18);
+}
+
+.savings-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.savings-top .small-title {
+  color: #8ed8ff;
+}
+
+.savings-top h2 {
+  font-size: 28px;
+  margin-bottom: 7px;
+}
+
+.savings-top p:not(.small-title) {
+  color: #d8eaf7;
+}
+
+.goal-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.savings-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+.savings-inputs label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.savings-inputs input {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.goal-btn {
+  margin-top: 22px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #1769aa;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.goal-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.goal-result {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.goal-result h3 {
+  margin-bottom: 7px;
+}
+
+.goal-result p {
+  color: #d8eaf7;
+}
+
+
+/* ================================
+   SAVING TIPS
+================================ */
+
+.saving-tips {
+  padding: 60px 8%;
+  background: #f7faff;
+}
+
+.tips-title {
+  margin-bottom: 25px;
+}
+
+.tips-title h2 {
+  color: #12345b;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.tip-card {
+  padding: 28px;
+  border-radius: 18px;
+  background: white;
+  border: 1px solid #e2ebf4;
+  transition: 0.3s;
+}
+
+.tip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
+}
+
+.tip-card span {
+  font-size: 35px;
+}
+
+.tip-card h3 {
+  color: #12345b;
+  margin: 15px 0 8px;
+}
+
+.tip-card p {
+  color: #718293;
+  line-height: 1.6;
+}
+
+
+/* ================================
+   BUDGET RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .budget-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-content {
+    grid-template-columns: 1fr;
+  }
+
+  .savings-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .budget-content,
+  .savings-section,
+  .saving-tips {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .savings-card {
+    padding: 25px;
+  }
+
+  .savings-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+}

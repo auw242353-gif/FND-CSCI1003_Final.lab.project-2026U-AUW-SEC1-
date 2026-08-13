@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Budget & Savings | Student Budget Tracker</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+
+      <div class="logo">
+        💰 Student Budget Tracker
+      </div>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="budget.html" class="active">Budget & Savings</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- Page Header -->
+    <section class="page-header budget-header">
+
+      <div>
+        <p class="welcome">PLAN YOUR FUTURE</p>
+
+        <h1>Budget & Savings</h1>
+
+        <p>
+          Set a budget, track your spending, and work towards
+          your savings goals.
+        </p>
+      </div>
+
+      <div class="page-illustration">
+        🎯
+      </div>
+
+    </section>
+
+
+    <!-- Budget Overview -->
+    <section class="budget-overview">
+
+      <div class="budget-card">
+
+        <div class="budget-card-icon">
+          💰
+        </div>
+
+        <div>
+          <p>Monthly Budget</p>
+          <h2 id="monthly-budget">৳0</h2>
+        </div>
+
+      </div>
+
+
+      <div class="budget-card">
+
+        <div class="budget-card-icon">
+          💸
+        </div>
+
+        <div>
+          <p>Total Spent</p>
+          <h2 id="total-spent">৳0</h2>
+        </div>
+
+      </div>
+
+
+      <div class="budget-card">
+
+        <div class="budget-card-icon">
+          🏦
+        </div>
+
+        <div>
+          <p>Budget Remaining</p>
+          <h2 id="budget-remaining">৳0</h2>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Main Budget Area -->
+    <section class="budget-content">
+
+
+      <!-- Set Budget -->
+      <div class="budget-form-card">
+
+        <p class="small-title">MONTHLY PLAN</p>
+
+        <h2>Set Your Monthly Budget</h2>
+
+        <p class="card-description">
+          Decide how much you want to spend this month.
+        </p>
+
+        <form id="budget-form">
+
+          <label for="budget-amount">
+            Monthly Budget
+          </label>
+
+          <div class="budget-input">
+
+            <span>৳</span>
+
+            <input
+              type="number"
+              id="budget-amount"
+              placeholder="Enter your budget"
+              min="0"
+              required
+            />
+
+          </div>
+
+          <button
+            type="submit"
+            class="add-transaction-btn">
+            Save Budget
+          </button>
+
+        </form>
+
+      </div>
+
+
+      <!-- Spending Progress -->
+      <div class="progress-card">
+
+        <div class="progress-heading">
+
+          <div>
+            <p class="small-title">SPENDING</p>
+            <h2>Budget Progress</h2>
+          </div>
+
+          <span id="budget-percentage">
+            0%
+          </span>
+
+        </div>
+
+
+        <div class="progress-bar">
+
+          <div
+            class="progress-fill"
+            id="progress-fill">
+          </div>
+
+        </div>
+
+
+        <div class="progress-info">
+
+          <span>
+            Spent: <strong id="progress-spent">৳0</strong>
+          </span>
+
+          <span>
+            Budget: <strong id="progress-budget">৳0</strong>
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Savings Goal -->
+    <section class="savings-section">
+
+      <div class="savings-card">
+
+        <div class="savings-top">
+
+          <div>
+
+            <p class="small-title">YOUR GOAL</p>
+
+            <h2>🎯 Savings Goal</h2>
+
+            <p>
+              Set a goal and stay motivated to save.
+            </p>
+
+          </div>
+
+          <div class="goal-icon">
+            🏆
+          </div>
+
+        </div>
+
+
+        <form id="savings-form">
+
+          <div class="savings-inputs">
+
+            <div>
+
+              <label for="goal-name">
+                Goal Name
+              </label>
+
+              <input
+                type="text"
+                id="goal-name"
+                placeholder="e.g. New Laptop"
+                required
+              />
+
+            </div>
+
+
+            <div>
+
+              <label for="goal-amount">
+                Target Amount
+              </label>
+
+              <input
+                type="number"
+                id="goal-amount"
+                placeholder="Enter target amount"
+                min="0"
+                required
+              />
+
+            </div>
+
+
+            <div>
+
+              <label for="saved-amount">
+                Already Saved
+              </label>
+
+              <input
+                type="number"
+                id="saved-amount"
+                placeholder="Enter saved amount"
+                min="0"
+                required
+              />
+
+            </div>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="goal-btn">
+            Set Savings Goal
+          </button>
+
+        </form>
+
+
+        <div
+          class="goal-result"
+          id="goal-result">
+
+          <h3>No savings goal set yet.</h3>
+
+          <p>
+            Set your first goal and start saving!
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Saving Tips -->
+    <section class="saving-tips">
+
+      <div class="tips-title">
+
+        <p class="small-title">SMART HABITS</p>
+
+        <h2>Simple Saving Tips</h2>
+
+      </div>
+
+
+      <div class="tips-grid">
+
+        <div class="tip-card">
+          <span>📋</span>
+          <h3>Plan Before Spending</h3>
+          <p>
+            Make a simple plan before spending your money.
+          </p>
+        </div>
+
+
+        <div class="tip-card">
+          <span>🍔</span>
+          <h3>Control Small Expenses</h3>
+          <p>
+            Small daily expenses can become large monthly costs.
+          </p>
+        </div>
+
+
+        <div class="tip-card">
+          <span>💰</span>
+          <h3>Save Regularly</h3>
+          <p>
+            Even a small amount saved regularly can make a difference.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>© 2026 Student Budget Tracker | Designed for Students</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
